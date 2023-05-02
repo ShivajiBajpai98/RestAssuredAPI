@@ -20,17 +20,5 @@ public class BearerToken
 
     }
 
-    @Test
-    void TestOToken()
-    {
-        String brearToken= "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";
 
-
-        given().auth().oauth2(brearToken)
-
-                .when().get("https://github.com")
-
-                .then().statusCode(200).log().all();
-
-    }
 }
