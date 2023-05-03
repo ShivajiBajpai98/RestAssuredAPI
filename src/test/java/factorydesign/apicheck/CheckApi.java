@@ -9,7 +9,7 @@ public class CheckApi
     {
         ApiFactory factory = new ApiFactory();
 
-        ApiTest apiTest=  factory.Request("Preemptive");
+        ApiTest apiTest=  factory.Request("Basic");
         apiTest.Response();
 
 
