@@ -1,0 +1,15 @@
+In the testBoundaryValues method, I test the lower boundary value by setting
+the first name, job fields to empty strings.
+We send a POST request to the /users endpoint and assert that the response
+status code is 400 (Bad Request).
+
+
+Then test the upper boundary value by setting the first name, job,
+to very long strings. We send another POST request to the /users endpoint and assert
+that the response status code is 400.
+
+
+Finally, test the boundary between valid and invalid input by setting the first name,
+job, fields to valid values.
+We send a third POST request to the /users endpoint and assert
+that the response status code is 201 (Created

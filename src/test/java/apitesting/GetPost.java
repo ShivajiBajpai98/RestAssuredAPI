@@ -52,7 +52,7 @@ public class GetPost
                     .when().post("/api/users")
                     .then()
                     .statusCode(201)
-                    .log()
+                   .log()
                     .all();
         } catch (JsonProcessingException e) {
             e.printStackTrace();

@@ -1,0 +1,14 @@
+I added two equivalence partitions: one for valid input and another for invalid input.
+
+In the testEquivalencePartitions method, we first test the valid input equivalence partition
+by setting valid values for the firstName, job,  sending a POST request to the /users
+endpoint.
+
+We then use Assert.assertEquals() method to verify that the response status code is 201,
+indicating that the request was successful.
+
+Next, we test the invalid input equivalence partition by setting empty
+values for the firstName, job, fields and sending a POST request to the /users endpoint.
+
+We then use Assert.assertEquals() method to verify that the response status code is 400,
+indicating that the request was unsuccessful due to invalid input.
