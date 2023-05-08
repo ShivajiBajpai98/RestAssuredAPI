@@ -5,6 +5,7 @@ import static io.restassured.RestAssured.*;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.restassured.http.ContentType;
+import io.restassured.response.Response;
 import org.json.JSONObject;
 import org.testng.annotations.Test;
 
@@ -44,7 +45,8 @@ public class GetPost
             System.out.println(json);
 
             baseURI="https://reqres.in/";
-            given()
+
+         given()
                     .header("Content-Type","application/Json")
                     .contentType(ContentType.JSON)
                     .accept(ContentType.JSON)
@@ -54,6 +56,8 @@ public class GetPost
                     .statusCode(201)
                    .log()
                     .all();
+
+
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }
