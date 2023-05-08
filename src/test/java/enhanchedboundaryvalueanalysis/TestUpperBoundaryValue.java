@@ -37,10 +37,15 @@ public class TestUpperBoundaryValue extends BaseTest
     }
 
     @DataProvider(name = "userData")
-    public Object[][] userData() throws IOException {
+    public Object[][] userData()  {
         String jsonPath = "src" + File.separator + "test" + File.separator + "resources" + File.separator + "testUpperBoundaryValue.json";
 
-        String jsonContent = new String(Files.readAllBytes(Paths.get(jsonPath)));
+        String jsonContent = null;
+        try {
+            jsonContent = new String(Files.readAllBytes(Paths.get(jsonPath)));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         JSONObject jsonObject = new JSONObject(jsonContent);
         return new Object[][]{{jsonObject}};
     }

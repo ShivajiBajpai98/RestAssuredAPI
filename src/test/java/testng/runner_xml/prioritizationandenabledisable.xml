@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="D:/TestNGLearning2/src/test/java/prioritizationandenabledisable/Priority.java">
+        <classes>
+            <class name="prioritizationandenabledisable.Priority">
+                <methods>
+                    <include name="testOne"/>
+                    <include name="testTwo"/>
+                    <include name="testThree"/>
+                    <include name="testFour"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

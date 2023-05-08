@@ -2,7 +2,7 @@ package testng.annotations;
 
 import org.testng.annotations.*;
 
-public class TestNGAnnotationLifeCycle
+public class TestCaseOne
 {
     @BeforeClass
     void beforeClass()
@@ -14,16 +14,15 @@ public class TestNGAnnotationLifeCycle
     {
         System.out.println("This will execute After the class");
     }
-
     @BeforeMethod
     void beforeMethod(){
         System.out.println("This will execute before every method");
     }
+
     @AfterMethod
     void afterMethod(){
         System.out.println("This will execute after every method");
     }
-
     @Test
     void test1()
     {
@@ -34,12 +33,12 @@ public class TestNGAnnotationLifeCycle
         System.out.println("Test2");
     }
 
-
     @BeforeTest
     void beforeTest()
     {
         System.out.println("This will execute before the test");
     }
+
     @AfterTest
     void afterTest()
     {
