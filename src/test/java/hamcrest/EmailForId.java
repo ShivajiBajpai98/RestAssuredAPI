@@ -21,7 +21,7 @@ public class EmailForId {
         JSONArray dataArray = responseBody.getJSONArray("data");
 
         // Loop through the array to find the desired ID and print its email value
-       /* int desiredId = 9;
+        int desiredId = 9;
         for (int i = 0; i < dataArray.length(); i++)
         {
             JSONObject dataObject = dataArray.getJSONObject(i);
@@ -34,9 +34,9 @@ public class EmailForId {
 
             }
 
-        }*/
+        }
 
-        // Loop through the array to find the desired name and print its email value
+        /*// Loop through the array to find the desired name and print its email value
         String desiredName = "Michael";
         for (int i = 0; i < dataArray.length(); i++) {
             JSONObject dataObject = dataArray.getJSONObject(i);
@@ -46,6 +46,6 @@ public class EmailForId {
                 System.out.println("Email for name " + desiredName + ": " + email);
                 break;
             }
-        }
+        }*/
     }
 }
