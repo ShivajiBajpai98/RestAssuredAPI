@@ -10,7 +10,8 @@ public class ExcelDataReader {
         String filePath = "src" + File.separator + "test" + File.separator + "resources" + File.separator + "data.xlsx";
         String sheetName = "Sheet1";
 
-        try (FileInputStream inputStream = new FileInputStream(filePath)) {
+        try (FileInputStream inputStream = new FileInputStream(filePath))
+        {
             Workbook workbook = WorkbookFactory.create(inputStream);
             Sheet sheet = workbook.getSheet(sheetName);
 
