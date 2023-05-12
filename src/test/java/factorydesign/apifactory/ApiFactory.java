@@ -1,6 +1,5 @@
 package factorydesign.apifactory;
 
-import factorydesign.*;
 import factorydesign.apiclasses.*;
 import factorydesign.apiinterface.ApiTest;
 
