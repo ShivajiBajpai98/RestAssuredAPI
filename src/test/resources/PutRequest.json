@@ -1,0 +1,16 @@
+{
+  "request": {
+    "method": "PUT",
+    "url": "/api/example",
+    "bodyPatterns": [
+      {
+        "equalToJson": "{\"id\": 123, \"name\": \"John Doe\"}",
+        "ignoreArrayOrder": true,
+        "ignoreExtraElements": true
+      }
+    ]
+  },
+  "response": {
+    "status": 200
+  }
+}

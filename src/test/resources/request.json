@@ -1,0 +1,6 @@
+{
+  "endpoint": "/api/books",
+  "requestMethod": "GET",
+  "httpStatus": 200,
+  "requestBody": "[{\"id\": 1, \"title\": \"Book 1\"}, {\"id\": 2, \"title\": \"Book 2\"}]"
+}

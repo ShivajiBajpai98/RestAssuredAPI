@@ -42,7 +42,7 @@ public class GetPost
 
         try {
             String json = objectMapper.writeValueAsString(elements);
-            System.out.println(json);
+           // System.out.println(json);
 
             baseURI="https://reqres.in/";
 
