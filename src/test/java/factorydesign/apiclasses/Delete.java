@@ -1,22 +1,17 @@
 package factorydesign.apiclasses;
 
 import factorydesign.apiinterface.ApiTest;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
 
-import static io.restassured.RestAssured.baseURI;
-import static io.restassured.RestAssured.when;
+import static io.restassured.RestAssured.given;
 
 public class Delete implements ApiTest {
     @Override
-    public void Response() {
+    public void execute() {
+        RequestSpecification request = given();
 
-        baseURI="https://reqres.in/";
-
-
-        when().delete("/api/users/2")
-                .then()
-                .statusCode(204)
-                .log()
-                .all();
-
+        Response response = request.delete("https://reqres.in/api/users/2");
+        response.prettyPrint();
     }
 }

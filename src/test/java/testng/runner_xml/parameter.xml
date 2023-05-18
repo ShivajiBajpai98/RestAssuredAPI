@@ -1,17 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-
 <suite name="All Test Suite">
     <parameter name="browser" value="chrome"></parameter>
-
-    <test verbose="2" preserve-order="true" name="D:/TestNGLearning2/src/test/java/parameter/Parameterization.java">
+    <test verbose="2" preserve-order="true" name="Parameterization Test">
         <classes>
-            <class name="parameter.Parameterization">
-                <methods>
-                    <include name="logoTest"/>
-                    <include name="homePageTitle"/>
-                </methods>
-            </class>
+            <class name="testng.parameter.Parameterization"/>
         </classes>
     </test>
 </suite>

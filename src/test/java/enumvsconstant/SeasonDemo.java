@@ -8,7 +8,7 @@ public class SeasonDemo {
     public static void main(String[] args) {
         Season currentSeason = Season.SPRING;
 
-        switch(currentSeason) {
+        switch (currentSeason) {
             case WINTER:
                 System.out.println("It's winter!");
                 break;

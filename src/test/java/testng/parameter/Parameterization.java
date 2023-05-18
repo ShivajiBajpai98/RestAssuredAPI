@@ -14,63 +14,45 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-public class Parameterization
-{
+public class Parameterization {
     WebDriver driver;
-    @BeforeClass
-    @Parameters({"browser"})
-    void setUP(String browser)
-    {
-        if (browser.equalsIgnoreCase("chrome"))
-        {
 
+    @BeforeClass
+    @Parameters("browser")
+    void setUp(String browser) {
+        if (browser.equalsIgnoreCase("chrome")) {
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--remote-allow-origins=*");
             WebDriverManager.chromedriver().setup();
-            driver=new ChromeDriver(options);
-            driver.get("https://www.atmecs.com/");
-
-
-          /*  WebDriverManager.chromedriver().setup();
-            driver=new ChromeDriver();*/
-        }
-        else if(browser.equalsIgnoreCase("firefox"))
-        {
-
+            driver = new ChromeDriver(options);
+        } else if (browser.equalsIgnoreCase("firefox")) {
             FirefoxOptions options = new FirefoxOptions();
-
             options.addArguments("--remote-allow-origins=*");
             WebDriverManager.firefoxdriver().setup();
-            driver=new FirefoxDriver(options);
-            driver.get("https://www.atmecs.com/");
-
-
-
+            driver = new FirefoxDriver(options);
+        } else {
+            throw new IllegalArgumentException("Invalid browser name: " + browser);
         }
 
-
+        driver.get("https://www.atmecs.com/");
     }
 
     @Test
-    void logoTest()
-    {
-
-        WebElement logo= driver.findElement(By.xpath("//img[@class='attachment-full size-full wp-image-12084 has-transparency lazyloaded']"));
-        Assert.assertTrue(logo.isDisplayed(),"logo is not on the page");
-
-
+    void logoTest() {
+        WebElement logo = driver.findElement(By.xpath("//img[@class='attachment-full size-full wp-image-12084 has-transparency lazyloaded']"));
+        Assert.assertTrue(logo.isDisplayed(), "Logo is not displayed on the page");
     }
 
     @Test
-    void homePageTitle()
-    {  String title= driver.getTitle();
-        // System.out.println(title);
-        Assert.assertEquals(title,"ATMECS - :: A True R&D Services Company","title is not matched");
+    void homePageTitle() {
+        String title = driver.getTitle();
+        Assert.assertEquals(title, "ATMECS - :: A True R&D Services Company", "Title is not matched");
     }
 
     @AfterClass
-    void tearDown()
-    {
-        driver.quit();
+    void tearDown() {
+        if (driver != null) {
+            driver.quit();
+        }
     }
 }

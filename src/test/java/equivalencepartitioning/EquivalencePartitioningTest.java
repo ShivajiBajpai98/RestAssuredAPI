@@ -4,11 +4,12 @@ import org.json.JSONObject;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
-import io.restassured.RestAssured;
 
+import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.testng.Assert;
@@ -27,7 +28,6 @@ public class EquivalencePartitioningTest {
     @BeforeClass
     public void setup() {
         RestAssured.baseURI = prop.getProperty("baseURI");
-
     }
 
     @Test
@@ -40,7 +40,6 @@ public class EquivalencePartitioningTest {
         requestParams.put("firstName", "Shivaji");
         requestParams.put("job", "Software Engineer");
 
-
         request.body(requestParams.toString());
 
         Response response = request.post("/api/users");
@@ -48,7 +47,7 @@ public class EquivalencePartitioningTest {
 
         int statusCode = response.getStatusCode();
 
-       // Assert.assertEquals(statusCode, 201);
+        // Assert.assertEquals(statusCode, 201);
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertEquals(statusCode, 400);
 
@@ -56,16 +55,14 @@ public class EquivalencePartitioningTest {
         requestParams.put("firstName", "");
         requestParams.put("job", "");
 
-
         request.body(requestParams.toString());
 
         Response response2 = request.post("/api/users");
         response2.prettyPrint();
 
-      int  statusCode2 = response2.getStatusCode();
-        //Assert.assertEquals(statusCode2, 400);
+        int statusCode2 = response2.getStatusCode();
+        // Assert.assertEquals(statusCode2, 400);
         softAssert.assertEquals(statusCode2, 400);
         softAssert.assertAll();
     }
 }
-
