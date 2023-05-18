@@ -3,8 +3,7 @@ package enumvsconstant;
 public class EnumVsConstantExample {
 
     // Enum definition
-    public enum DaysOfWeek
-    {
+    public enum DaysOfWeek {
         MONDAY,
         TUESDAY,
         WEDNESDAY,

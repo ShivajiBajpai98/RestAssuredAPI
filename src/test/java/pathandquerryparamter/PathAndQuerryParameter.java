@@ -11,7 +11,7 @@ public class PathAndQuerryParameter {
     private static final String ID_QUERY_PARAM_NAME = "id";
 
     @Test
-    void testPathAndQuerryParamete() {
+    void testPathAndQueryParamete() {
         given()
                 .pathParam("resourceName", RESOURCE_NAME)
                 .queryParam(PAGE_QUERY_PARAM_NAME, 2)

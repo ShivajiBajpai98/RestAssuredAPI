@@ -2,45 +2,44 @@ package testng.annotations;
 
 import org.testng.annotations.*;
 
-public class TestCaseTwo
-{
+public class TestCaseTwo {
+    @BeforeSuite
+    void beforeSuite() {
+        System.out.println("This will execute before the test suite");
+    }
+
+    @AfterSuite
+    void afterSuite() {
+        System.out.println("This will execute after the test suite");
+    }
+
     @BeforeClass
-    void beforeClass()
-    {
+    void beforeClass() {
         System.out.println("This will execute before the class");
     }
+
     @AfterClass
-    void afterClass()
-    {
-        System.out.println("This will execute After the class");
+    void afterClass() {
+        System.out.println("This will execute after the class");
     }
+
     @BeforeMethod
-    void beforeMethod(){
+    void beforeMethod() {
         System.out.println("This will execute before every method");
     }
 
     @AfterMethod
-    void afterMethod(){
+    void afterMethod() {
         System.out.println("This will execute after every method");
     }
+
     @Test
-    void test3()
-    {
+    void test3() {
         System.out.println("Test3");
     }
-    @Test
-    void test4(){
-        System.out.println("Test4");
-    }
 
-    @BeforeSuite
-    void beforeSuite()
-    {
-        System.out.println("It will execute before test suite");
-    }
-    @AfterSuite
-    void AfterSuite()
-    {
-        System.out.println("It will execute After  test suite");
+    @Test
+    void test4() {
+        System.out.println("Test4");
     }
 }

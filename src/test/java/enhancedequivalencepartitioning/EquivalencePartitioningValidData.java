@@ -13,12 +13,11 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-public class EquivalencePartitioningValidData {
+public class EquivalencePartitioningValidData extends BaseTest {
+
     @Test(dataProvider = "userData")
     public void testUpperBoundaryValue(JSONObject user) {
-        System.out.println("Test lower boundary value");
-        RequestSpecification request = RestAssured.given();
-        request.header("Content-Type", "application/json");
+        System.out.println("Test upper boundary value");
         request.body(user.toString());
 
         Response response = request.post("/api/users");
@@ -26,22 +25,23 @@ public class EquivalencePartitioningValidData {
         int statusCode = response.getStatusCode();
         Assert.assertEquals(statusCode, 400);
 
-
         String responseBody = response.getBody().asString();
         System.out.println("Response Body is =>  " + responseBody);
     }
 
     @DataProvider(name = "userData")
-    public Object[][] userData()  {
+    public Object[][] userData() {
         String jsonPath = "src" + File.separator + "test" + File.separator + "resources" + File.separator + "testUpperBoundaryValue.json";
+        return new Object[][]{{getJSONFromJSONFile(jsonPath)}};
+    }
 
+    private JSONObject getJSONFromJSONFile(String filePath) {
         String jsonContent = null;
         try {
-            jsonContent = new String(Files.readAllBytes(Paths.get(jsonPath)));
+            jsonContent = new String(Files.readAllBytes(Paths.get(filePath)));
         } catch (IOException e) {
             e.printStackTrace();
         }
-        JSONObject jsonObject = new JSONObject(jsonContent);
-        return new Object[][]{{jsonObject}};
+        return new JSONObject(jsonContent);
     }
 }

@@ -48,7 +48,5 @@ public class Chain {
                 .statusCode(200)
                 .log()
                 .all();
-
     }
-
 }

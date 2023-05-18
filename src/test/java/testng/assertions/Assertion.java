@@ -11,41 +11,33 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class Assertion
-{
+public class Assertion {
     WebDriver driver;
+
     @BeforeClass
-    void setUP()
-    {
+    void setUp() {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
         WebDriverManager.chromedriver().setup();
-        driver=new ChromeDriver(options);
+        driver = new ChromeDriver(options);
         driver.get("https://www.atmecs.com/");
-
     }
 
     @Test
-    void logoTest()
-    {
-      WebElement logo= driver.findElement(By.xpath("//img[@class='attachment-full size-full wp-image-12084 has-transparency lazyloaded']"));
-        Assert.assertTrue(logo.isDisplayed(),"logo is not on the page");
-
-
-
+    void logoTest() {
+        WebElement logo = driver.findElement(By.xpath("//img[@class='attachment-full size-full wp-image-12084 has-transparency lazyloaded']"));
+        Assert.assertTrue(logo.isDisplayed(), "Logo is not displayed on the page");
     }
 
     @Test
-    void homePageTitle()
-    {
-       String title= driver.getTitle();
+    void homePageTitle() {
+        String title = driver.getTitle();
         System.out.println(title);
-       Assert.assertEquals(title,"ATMECS - :: A True R&D Services Company","title is not matched");
+        Assert.assertEquals(title, "ATMECS - :: A True R&D Services Company", "Title is not matched");
     }
 
     @AfterClass
-    void tearDown()
-    {
-        //driver.quit();
+    void tearDown() {
+        driver.quit();
     }
 }
