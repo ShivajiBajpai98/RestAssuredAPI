@@ -13,8 +13,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
-public class PutRequest
-{
+public class PutRequest {
     private Properties prop;
 
     @BeforeTest
@@ -34,18 +33,21 @@ public class PutRequest
         RequestSpecification request = RestAssured.given();
         request.header("Content-Type", "application/json");
 
+        // Create a JSON object for request parameters
         JSONObject requestParams = new JSONObject();
         requestParams.put("firstName", "Shivaji");
         requestParams.put("job", "Engineer");
 
-
+        // Set the request body
         request.body(requestParams.toString());
 
+        // Send PUT request
         Response response = request.put("/api/users/2");
         response.prettyPrint();
 
+        // Verify the status code
         int statusCode = response.getStatusCode();
-        System.out.println("Status Code"+statusCode);
+        System.out.println("Status Code: " + statusCode);
         Assert.assertEquals(statusCode, 200);
     }
 }

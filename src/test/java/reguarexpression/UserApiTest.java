@@ -1,4 +1,4 @@
-package reguarexpression;
+package regexpression;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
@@ -9,20 +9,19 @@ public class UserApiTest {
 
     @Test
     public void testGetUsers() {
-        Response response = RestAssured. get("https://reqres.in/api/users?page=2");
+        // Send GET request to retrieve user data
+        Response response = RestAssured.get("https://reqres.in/api/users?page=2");
+
+        // Get the status code from the response
         int statusCode = response.getStatusCode();
+
+        // Assert the status code
         Assert.assertEquals(statusCode, 200);
 
-        // Assert the number of users
+        // Get the number of users in the response
         int numOfUsers = response.path("data.size()");
-        System.out.println(numOfUsers);
-       /* Assert.assertEquals(numOfUsers, 3);
+        System.out.println("Number of users: " + numOfUsers);
 
-        // Assert the properties of each user
-        Assert.assertEquals((Double) response.path("data[0].id"), 1);
-        Assert.assertEquals(response.path("data[0].email"), "george.bluth@reqres.in");
-        Assert.assertEquals(response.path("data[0].first_name"), "George");
-        Assert.assertEquals(response.path("data[0].last_name"), "Bluth");
-        //Assert.assertTrue(response.path("data[0].avatar").contains(".jpg"));*/
+
     }
 }

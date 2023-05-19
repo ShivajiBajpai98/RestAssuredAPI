@@ -21,7 +21,7 @@ public class APITest {
         // Send request and get response
         Response response = request.get(path);
 
-        // Deserialize JSON response to Page object
+        // Deserialize JSON response to Page object using Gson library
         Page page = new Gson().fromJson(response.getBody().asString(), Page.class);
 
         // Print response

@@ -1,24 +1,24 @@
 package boundaryvalueanalysis;
 
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
 import org.json.JSONObject;
-import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
-
-import io.restassured.RestAssured;
-import io.restassured.response.Response;
-import io.restassured.specification.RequestSpecification;
-import org.testng.asserts.SoftAssert;
 
 public class BoundaryValueAnalysisTest {
     private Properties prop;
 
     @BeforeTest
     public void loadProperties() throws IOException {
+        // Load the configuration properties file
         prop = new Properties();
         FileInputStream fis = new FileInputStream("src/test/resources/config.properties");
         prop.load(fis);
@@ -26,14 +26,17 @@ public class BoundaryValueAnalysisTest {
 
     @BeforeClass
     public void setup() {
+        // Set the base URI for the API endpoint
         RestAssured.baseURI = prop.getProperty("baseURI");
     }
 
     @Test
     public void testBoundaryValues() {
+        // Create a request specification
         RequestSpecification request = RestAssured.given();
         request.header("Content-Type", "application/json");
 
+        // Create a SoftAssert object for soft assertions
         SoftAssert softAssert = new SoftAssert();
 
         // Test lower boundary value
@@ -80,6 +83,7 @@ public class BoundaryValueAnalysisTest {
         softAssert.assertEquals(statusCode3, 201);
         response3.prettyPrint();
 
+        // Perform soft assertions
         softAssert.assertAll();
     }
 }

@@ -16,6 +16,7 @@ public class Assertion {
 
     @BeforeClass
     void setUp() {
+        // Set up Chrome driver
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
         WebDriverManager.chromedriver().setup();
@@ -25,12 +26,14 @@ public class Assertion {
 
     @Test
     void logoTest() {
+        // Verify if the logo is displayed on the page
         WebElement logo = driver.findElement(By.xpath("//img[@class='attachment-full size-full wp-image-12084 has-transparency lazyloaded']"));
         Assert.assertTrue(logo.isDisplayed(), "Logo is not displayed on the page");
     }
 
     @Test
     void homePageTitle() {
+        // Verify the title of the home page
         String title = driver.getTitle();
         System.out.println(title);
         Assert.assertEquals(title, "ATMECS - :: A True R&D Services Company", "Title is not matched");
@@ -38,6 +41,7 @@ public class Assertion {
 
     @AfterClass
     void tearDown() {
+        // Quit the driver and close the browser
         driver.quit();
     }
 }

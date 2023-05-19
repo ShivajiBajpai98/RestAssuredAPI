@@ -7,6 +7,10 @@ public class User {
     private String last_name;
     private String avatar;
 
+    public User() {
+        // Default constructor is required for POJO deserialization
+    }
+
     public User(int id, String email, String first_name, String last_name, String avatar) {
         this.id = id;
         this.email = email;
@@ -15,7 +19,7 @@ public class User {
         this.avatar = avatar;
     }
 
-
+    // Getter and setter methods for the private fields
 
     public int getId() {
         return id;
@@ -56,5 +60,4 @@ public class User {
     public void setAvatar(String avatar) {
         this.avatar = avatar;
     }
-
 }

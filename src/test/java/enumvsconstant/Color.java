@@ -15,7 +15,7 @@ public enum Color {
         return hexCode;
     }
 
-    // Main.java
+    // Builder2.java
     public static class Main {
         public static void main(String[] args) {
             Color red = Color.RED;

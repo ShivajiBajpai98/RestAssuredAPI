@@ -29,7 +29,7 @@ public class GetRequest {
                 .then()
                 .extract().response();
 
-
+        // Verify the status code
         int statusCode = response.getStatusCode();
         Assert.assertEquals(statusCode, 200);
 

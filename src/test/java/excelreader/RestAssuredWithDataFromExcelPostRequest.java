@@ -1,4 +1,4 @@
-package datautilites;
+package excelreader;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
@@ -56,13 +56,19 @@ public class RestAssuredWithDataFromExcelPostRequest {
 
     @Test(dataProvider = "testData")
     public void testRestAssured(String name, String job) {
+        // Set the base URI for RestAssured
         RestAssured.baseURI = "https://reqres.in/";
+
+        // Create the request body using the data from Excel
         String requestBody = String.format("{\"name\":\"%s\",\"job\":\"%s\"}", name, job);
+
+        // Send the POST request and get the response
         Response response = RestAssured.given()
                 .header("Content-Type", "application/json")
                 .body(requestBody)
                 .post("/api/users");
 
+        // Print the response body and status code
         System.out.println(response.getBody().asString());
         System.out.println(response.getStatusCode());
     }

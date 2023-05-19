@@ -10,11 +10,19 @@ import static io.restassured.RestAssured.given;
 public class Patch implements ApiTest {
     @Override
     public void execute() {
+        // Create a RequestSpecification object
         RequestSpecification request = given();
+
+        // Set the content type to JSON
         request.contentType(ContentType.JSON);
+
+        // Set the request body as JSON
         request.body("{\"name\":\"John\", \"job\":\"Engineer\"}");
 
+        // Send the PATCH request to the specified URL
         Response response = request.patch("https://reqres.in/api/users/2");
+
+        // Print the response body for visualization
         response.prettyPrint();
     }
 }

@@ -5,7 +5,9 @@ import org.testng.annotations.Test;
 
 public class FakeData {
     @Test
-    void GenerateDummyData() {
+    void generateDummyData() {
+        // Test method to generate dummy data using the Faker library
+
         Faker faker = new Faker();
         String firstName = faker.name().firstName();
         String lastName = faker.name().lastName();
@@ -16,7 +18,7 @@ public class FakeData {
 
         System.out.println("First Name: " + firstName);
         System.out.println("Last Name: " + lastName);
-        System.out.println("User Name: " + userName);
+        System.out.println("Person1 Name: " + userName);
         System.out.println("Password: " + password);
         System.out.println("Phone Number: " + phone);
         System.out.println("Email: " + email);

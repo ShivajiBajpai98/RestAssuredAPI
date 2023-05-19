@@ -7,9 +7,11 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<build>
 		<plugins>
+			<!-- Compiler Plugin -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
 				<configuration>
 					<source>9</source>
 					<target>9</target>
@@ -23,17 +25,15 @@
 		<maven.compiler.target>8</maven.compiler.target>
 	</properties>
 	<dependencies>
-
-
-		<!-- https://mvnrepository.com/artifact/org.json/json -->
+		<!-- Dependencies -->
+		<!-- JSON Library -->
 		<dependency>
 			<groupId>org.json</groupId>
 			<artifactId>json</artifactId>
 			<version>20190722</version>
 		</dependency>
 
-
-		<!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
+		<!-- REST Assured for API testing -->
 		<dependency>
 			<groupId>io.rest-assured</groupId>
 			<artifactId>rest-assured</artifactId>
@@ -41,6 +41,7 @@
 			<scope>test</scope>
 		</dependency>
 
+		<!-- TestNG for testing framework -->
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
@@ -48,39 +49,43 @@
 			<scope>test</scope>
 		</dependency>
 
+		<!-- JSON Simple for JSON manipulation -->
 		<dependency>
 			<groupId>com.googlecode.json-simple</groupId>
 			<artifactId>json-simple</artifactId>
 			<version>1.1.1</version>
 		</dependency>
 
-
-		<!-- https://mvnrepository.com/artifact/org.hamcrest/hamcrest -->
+		<!-- Hamcrest for assertions -->
 		<dependency>
 			<groupId>org.hamcrest</groupId>
 			<artifactId>hamcrest</artifactId>
 			<version>2.2</version>
 			<scope>test</scope>
 		</dependency>
+
+		<!-- Java Faker for generating fake data -->
 		<dependency>
 			<groupId>com.github.javafaker</groupId>
 			<artifactId>javafaker</artifactId>
 			<version>1.0.2</version>
 		</dependency>
 
+		<!-- Selenium WebDriver -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
 			<version>4.1.1</version>
 		</dependency>
+
+		<!-- WebDriverManager for managing WebDriver binaries -->
 		<dependency>
 			<groupId>io.github.bonigarcia</groupId>
 			<artifactId>webdrivermanager</artifactId>
 			<version>5.0.3</version>
 		</dependency>
 
-
-
+		<!-- Apache POI for working with Excel files -->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi</artifactId>
@@ -92,7 +97,7 @@
 			<version>5.2.2</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/io.rest-assured/json-schema-validator -->
+		<!-- JSON Schema Validator for validating JSON responses -->
 		<dependency>
 			<groupId>io.rest-assured</groupId>
 			<artifactId>json-schema-validator</artifactId>
@@ -100,7 +105,7 @@
 			<scope>test</scope>
 		</dependency>
 
-
+		<!-- WireMock for creating mock HTTP services -->
 		<dependency>
 			<groupId>com.github.tomakehurst</groupId>
 			<artifactId>wiremock-jre8-standalone</artifactId>
@@ -108,6 +113,7 @@
 			<scope>test</scope>
 		</dependency>
 
+		<!-- ScribeJava APIs for OAuth authentication -->
 		<dependency>
 			<groupId>com.github.scribejava</groupId>
 			<artifactId>scribejava-apis</artifactId>
@@ -119,7 +125,21 @@
 			<version>8.2.0</version>
 		</dependency>
 
+		<!-- Log4j 2 for logging -->
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>2.14.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>2.14.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-slf4j-impl</artifactId>
+			<version>2.14.1</version>
+		</dependency>
 	</dependencies>
-
-
 </project>

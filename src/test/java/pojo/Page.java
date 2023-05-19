@@ -2,13 +2,16 @@ package pojo;
 
 import java.util.List;
 
-public class Page
-{
+public class Page {
     private int page;
     private int per_page;
     private int total;
     private int total_pages;
     private List<User> data;
+
+    public Page() {
+        // Default constructor is required for POJO deserialization
+    }
 
     public Page(int page, int per_page, int total, int total_pages, List<User> data) {
         this.page = page;
@@ -17,6 +20,8 @@ public class Page
         this.total_pages = total_pages;
         this.data = data;
     }
+
+    // Getter and setter methods for the private fields
 
     public int getPage() {
         return page;
@@ -57,8 +62,4 @@ public class Page
     public void setData(List<User> data) {
         this.data = data;
     }
-
-
-
-
 }

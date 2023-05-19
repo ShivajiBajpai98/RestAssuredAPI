@@ -3,6 +3,7 @@ package testng.annotations;
 import org.testng.annotations.*;
 
 public class TestCaseOne {
+
     @BeforeSuite
     void beforeSuite() {
         System.out.println("This will execute before the test suite");

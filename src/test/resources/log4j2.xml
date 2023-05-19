@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <!-- Configuration status sets the logging level for Log4j internal status messages.
+         Here, it is set to "WARN" to only display warning messages. -->
+    <Appenders>
+        <!-- Appenders define where log messages are outputted. -->
+        <Console name="Console" target="SYSTEM_OUT">
+            <!-- Console appender outputs log messages to the console. -->
+            <PatternLayout pattern="%d [%t] %-5level %logger{36} - %msg%n" />
+            <!-- PatternLayout specifies the log message format using a pattern.
+                 The pattern here includes the date, thread ID, log level, logger name,
+                 and the log message itself. -->
+        </Console>
+    </Appenders>
+    <Loggers>
+        <!-- Loggers define the logging behavior for specific loggers. -->
+        <Root level="info">
+            <!-- Root logger is the highest-level logger that acts as the parent for all loggers.
+                 It is set to log messages with a level of "info" or higher. -->
+            <AppenderRef ref="Console" />
+            <!-- AppenderRef references the Console appender defined earlier,
+                 indicating that log messages should be sent to the Console appender. -->
+        </Root>
+    </Loggers>
+</Configuration>
