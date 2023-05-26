@@ -36,7 +36,7 @@ public class BearerTokenAuthorization {
                 .willReturn(aResponse()
                         .withStatus(200)
                         .withHeader("Content-Type", "application/json")
-                        .withBody("{\"id\": 1, \"name\": \"John Doe\"}")));
+                        .withBody("{\"id\": 1, \"name\": \"Shivaji\"}")));
 
         // Making the authorized API request with bearer token
         Response response = given()

@@ -36,7 +36,7 @@ public class DigestAuthAuthorization {
                 .willReturn(aResponse()
                         .withStatus(200)
                         .withHeader("Content-Type", "application/json")
-                        .withBody("{\"id\": 1, \"name\": \"John Doe\"}")));
+                        .withBody("{\"id\": 1, \"name\": \"Shivaji\"}")));
 
         // Making the authorized API request with Digest Authentication
         Response response = given()

@@ -36,7 +36,7 @@ public class BasicAuthAuthorization {
                 .willReturn(aResponse()
                         .withStatus(200)
                         .withHeader("Content-Type", "application/json")
-                        .withBody("{\"id\": 1, \"name\": \"John Doe\"}")));
+                        .withBody("{\"id\": 1, \"name\": \"shivaji\"}")));
 
         // Making the authorized API request with basic authentication
         Response response = given()

@@ -36,7 +36,7 @@ public class ApiKeyAuthorizationTest {
                 .willReturn(aResponse()
                         .withStatus(200)
                         .withHeader("Content-Type", "application/json")
-                        .withBody("{\"id\": 1, \"name\": \"John Doe\"}")));
+                        .withBody("{\"id\": 1, \"name\": \"Shivaji\"}")));
 
         // Making the authorized API request with API key
         Response response = given()
