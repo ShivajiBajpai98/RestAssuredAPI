@@ -3,6 +3,7 @@ package wiremock;
 import com.github.tomakehurst.wiremock.client.WireMock;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
+import io.restassured.response.Response;
 import org.hamcrest.Matchers;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -38,8 +39,30 @@ public class WireMockGetRequest {
                 .contentType(ContentType.JSON)
                 .body("id", Matchers.equalTo(123))
                 .body("name", Matchers.equalTo("John Doe"));
+
     }
 
+
+  /*  @Test
+    public void testMockedApi() {
+        Response response = RestAssured.given()
+                .baseUri("http://" + HOST)
+                .port(PORT)
+                .contentType(ContentType.JSON)
+                .when()
+                .get("/api/example");
+
+        response.then()
+                .statusCode(200)
+                .contentType(ContentType.JSON)
+                .body("id", Matchers.equalTo(123))
+                .body("name", Matchers.equalTo("John Doe"));
+
+        // Print the response
+        String responseBody = response.getBody().asString();
+        System.out.println("Response: " + responseBody);
+    }
+*/
     @AfterClass
     public static void teardown() {
         WireMock.reset();

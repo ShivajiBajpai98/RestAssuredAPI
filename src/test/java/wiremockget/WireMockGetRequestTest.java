@@ -14,7 +14,8 @@ import static com.github.tomakehurst.wiremock.client.WireMock.configure;
 import static com.github.tomakehurst.wiremock.client.WireMock.reset;
 import static wiremockget.WireMockHelper.stubGetRequestFromFile;
 
-public class WireMockGetRequestTest {
+public class WireMockGetRequestTest
+{
 
     @BeforeClass
     public static void setup() throws IOException {
