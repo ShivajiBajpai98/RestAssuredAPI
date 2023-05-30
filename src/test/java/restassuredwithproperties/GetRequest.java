@@ -16,7 +16,7 @@ public class GetRequest {
 
         // Load properties file
         Properties prop = new Properties();
-        FileInputStream input = new FileInputStream("src/test/resources/config.properties");
+        FileInputStream input = new FileInputStream("src/test/resources/configuring1.properties");
         prop.load(input);
 
         // Set base URI

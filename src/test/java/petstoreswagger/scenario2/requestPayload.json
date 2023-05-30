@@ -1,0 +1,18 @@
+{
+  "id": 1221,
+  "category": {
+    "id": 12,
+    "name": "string"
+  },
+  "name": "doggie",
+  "photoUrls": [
+    "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.aajtak.in%2Findia%2Fnews%2Fphoto%2Findian-mlitary-dog-squad-know-10-unknown-facts-which-you-did-not-even-know-tstrd-1475576-2022-06-03&psig=AOvVaw3PHakSayY7iVn0Rvq4oX_X&ust=1685533690508000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCIiO57v8nP8CFQAAAAAdAAAAABAE"
+  ],
+  "tags": [
+    {
+      "id": 10,
+      "name": "string"
+    }
+  ],
+  "status": "available"
+}

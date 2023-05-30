@@ -19,7 +19,7 @@ public class PutRequest {
     @BeforeTest
     public void loadProperties() throws IOException {
         prop = new Properties();
-        FileInputStream fis = new FileInputStream("src/test/resources/config.properties");
+        FileInputStream fis = new FileInputStream("src/test/resources/configuring1.properties");
         prop.load(fis);
     }
 

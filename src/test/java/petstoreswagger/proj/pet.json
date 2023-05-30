@@ -1,0 +1,18 @@
+{
+  "id": 123454321,
+  "name": "Fluffy",
+  "status": "available",
+  "category": {
+    "id": 1,
+    "name": "Cats"
+  },
+  "photoUrls": [
+    "https://www.google.com/url?sa=i&url=https%3A%2F%2Fpixabay.com%2Fimages%2Fsearch%2Fcat%2F&psig=AOvVaw1yARQ_t2_sapfus_KwAWvK&ust=1685547943288000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCNiqrvCxnf8CFQAAAAAdAAAAABAE"
+  ],
+  "tags": [
+    {
+      "id": 1,
+      "name": "friendly"
+    }
+  ]
+}

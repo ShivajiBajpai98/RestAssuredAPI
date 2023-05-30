@@ -1,0 +1,26 @@
+{
+  "id": 1221,
+  "category": {
+    "id": 1,
+    "name": "Dogs"
+  },
+  "name": "Buddy",
+  "photoUrls": [
+    "https://www.google.com/url?sa=i&url=https%3A%2F%2Fpixabay.com%2Fimages%2Fsearch%2Fcat%2F&psig=AOvVaw2RO4U7IfleJcCp7om_6oqk&ust=1685538590806000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCLid7-6Onf8CFQAAAAAdAAAAABAE"
+  ],
+  "tags": [
+    {
+      "id": 1,
+      "name": "Friendly"
+    },
+    {
+      "id": 2,
+      "name": "Playful"
+    },
+    {
+      "id": 3,
+      "name": "Active"
+    }
+  ],
+  "status": "sold"
+}
