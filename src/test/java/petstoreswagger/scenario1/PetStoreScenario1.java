@@ -54,7 +54,7 @@ public class PetStoreScenario1 {
         request.header("Content-Type", "application/json");
 
         // Read the request payload from the JSON file
-        String requestPayloadPath = "src" + File.separator + "test" + File.separator + "java" + File.separator + "petstoreswagger" + File.separator + "scenario1" + File.separator + "pet.json";
+        String requestPayloadPath = "src" + File.separator + "test" + File.separator + "java" + File.separator + "petstoreswagger" + File.separator + "scenario1" + File.separator + "requestPayload.json";
         String requestBody = null;
         try {
             requestBody = new String(Files.readAllBytes(Paths.get(requestPayloadPath)));
@@ -70,11 +70,11 @@ public class PetStoreScenario1 {
 
         // Get the response status code
         int statusCode = response.getStatusCode();
-        System.out.println("Status Code: " + statusCode);
+        System.out.println("Add Pet to Store - Status Code: " + statusCode);
 
         // Print the response body
         String responseBody = response.getBody().asString();
-        System.out.println("Add Pet to Store Response Body:");
+        System.out.println("Add Pet to Store - Response Body:");
         System.out.println(responseBody);
 
         // Check the status code to confirm the pet was added successfully
@@ -92,10 +92,10 @@ public class PetStoreScenario1 {
 
         // Get the response status code
         int statusCode = response.getStatusCode();
-        System.out.println("Status Code: " + statusCode);
+        System.out.println("Find Pet by ID - Status Code: " + statusCode);
         // Print the response body
         String responseBody = response.getBody().asString();
-        System.out.println("Find Pet by ID Response Body:");
+        System.out.println("Find Pet by ID - Response Body:");
         System.out.println(responseBody);
 
         // Check the status code to confirm the pet was found successfully
@@ -114,16 +114,46 @@ public class PetStoreScenario1 {
 
         // Get the response status code
         int statusCode = response.getStatusCode();
-        System.out.println("Status Code: " + statusCode);
-
+        System.out.println("Find Pet by Status - Status Code: " + statusCode);
 
         // Print the response body
         String responseBody = response.getBody().asString();
-        System.out.println("Find Pet by Status Response Body:");
+        System.out.println("Find Pet by Status - Response Body:");
         System.out.println(responseBody);
 
         // Check the status code to confirm pets were found successfully
         response.then().statusCode(200);
         response.then().body("status", Matchers.everyItem(equalTo(status)));
+    }
+
+    @Test(priority = 4)
+    public void uploadFile() {
+        int petId = 941107;
+        String filePath = "src" + File.separator + "test" + File.separator + "java" + File.separator + "petstoreswagger" + File.separator + "scenario1" + File.separator + "pegion.jpg";
+
+        // Set the request content type as multipart form data
+        request.header("Content-Type", "multipart/form-data");
+
+        // Set the pet ID as a path parameter
+        request.pathParam("petId", petId);
+
+        // Set the file to be uploaded
+        request.multiPart(new File(filePath));
+
+        // Send the POST request to upload the file for the pet
+        Response response = request.post("/pet/{petId}/uploadImage");
+
+        // Get the response status code
+        int statusCode = response.getStatusCode();
+        System.out.println("Upload File - Status Code: " + statusCode);
+
+        // Print the response body
+        String responseBody = response.getBody().asString();
+        System.out.println("Upload File - Response Body:");
+        System.out.println(responseBody);
+
+        // Check the status code to confirm the file was uploaded successfully
+        response.then().statusCode(200);
+        response.then().body("message", Matchers.containsString("File uploaded"));
     }
 }
