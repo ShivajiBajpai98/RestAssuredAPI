@@ -1,0 +1,22 @@
+{
+  "id": 123454321,
+  "category": {
+    "id": 1,
+    "name": "Dogs"
+  },
+  "name": "Max",
+  "photoUrls": [
+    "https://upload.wikimedia.org/wikipedia/commons/4/43/Cute_dog.jpg"
+  ],
+  "tags": [
+    {
+      "id": 1,
+      "name": "Friendly"
+    },
+    {
+      "id": 2,
+      "name": "Playful"
+    }
+  ],
+  "status": "available"
+}

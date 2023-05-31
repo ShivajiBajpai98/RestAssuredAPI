@@ -129,7 +129,7 @@ public class PS1 {
     @Test(priority = 4)
     public void uploadFile() {
         int petId = 941107;
-        String filePath = "src" + File.separator + "test" + File.separator + "java" + File.separator + "petstoreswagger" + File.separator + "scenario1" + File.separator + "pegion.jpg";
+        String filePath = "src" + File.separator + "test" + File.separator + "java" + File.separator + "petstoreswagger" + File.separator + "scenario1" + File.separator + "dog.jpg";
 
         // Set the request content type as multipart form data
         request.header("Content-Type", "multipart/form-data");

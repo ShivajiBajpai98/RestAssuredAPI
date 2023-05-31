@@ -1,0 +1,22 @@
+{
+  "id": 941107,
+  "name": "Fluffy",
+  "status": "sold",
+  "category": {
+    "id": 1,
+    "name": "Dog"
+  },
+  "photoUrls": [
+    "https://upload.wikimedia.org/wikipedia/commons/4/43/Cute_dog.jpg"
+  ],
+  "tags": [
+    {
+      "id": 1,
+      "name": "friendly"
+    },
+    {
+      "id": 2,
+      "name": "active"
+    }
+  ]
+}

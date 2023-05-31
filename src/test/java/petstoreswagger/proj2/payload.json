@@ -1,0 +1,22 @@
+{
+  "id": 123454321,
+  "category": {
+    "id": 1,
+    "name": "Dogs"
+  },
+  "name": "Max",
+  "photoUrls": [
+    "https://images.pexels.com/photos/3687770/pexels-photo-3687770.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+  ],
+  "tags": [
+    {
+      "id": 1,
+      "name": "Friendly"
+    },
+    {
+      "id": 2,
+      "name": "Playful"
+    }
+  ],
+  "status": "available"
+}

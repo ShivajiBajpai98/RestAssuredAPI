@@ -4,10 +4,10 @@
   "status": "available",
   "category": {
     "id": 1,
-    "name": "Cats"
+    "name": "Dog"
   },
   "photoUrls": [
-    "https://www.google.com/url?sa=i&url=https%3A%2F%2Fpixabay.com%2Fimages%2Fsearch%2Fcat%2F&psig=AOvVaw2RO4U7IfleJcCp7om_6oqk&ust=1685538590806000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCLid7-6Onf8CFQAAAAAdAAAAABAE"
+    "https://upload.wikimedia.org/wikipedia/commons/4/43/Cute_dog.jpg"
   ],
   "tags": [
     {
