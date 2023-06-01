@@ -26,6 +26,11 @@ public class CustomListeners implements ITestListener {
     }
 
     @Override
+    public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
+
+    }
+
+    @Override
     public void onTestSuccess(ITestResult result) {
         System.out.println("Passed test: " + result.getName());
     }

@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="PetStore Test Suite">
+    <test name="PetStore Test">
+        <classes>
+            <class name="petstoreswagger.finalproject.TestScenario">
+                <methods>
+                    <include name="scenarioOne"/>
+                    <include name="scenarioTwo"/>
+                    <include name="scenarioThree"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

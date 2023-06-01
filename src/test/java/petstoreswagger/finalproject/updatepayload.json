@@ -1,0 +1,18 @@
+{
+  "id": 12321,
+  "category": {
+    "id": 1,
+    "name": "Indian DOg"
+  },
+  "name": "doggie",
+  "photoUrls": [
+    "https://upload.wikimedia.org/wikipedia/commons/4/43/Cute_dog.jpg"
+  ],
+  "tags": [
+    {
+      "id": 101,
+      "name": "White DOg"
+    }
+  ],
+  "status": "sold"
+}

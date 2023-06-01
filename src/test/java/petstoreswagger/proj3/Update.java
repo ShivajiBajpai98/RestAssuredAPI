@@ -78,6 +78,7 @@ public class Update {
         response.then().statusCode(200);
     }
 
+    @Test(priority = 2)
     public void updatePet() {
         int petId = 941107;
 

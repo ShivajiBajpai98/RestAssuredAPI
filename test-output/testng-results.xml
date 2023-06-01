@@ -1,20 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="3" total="4" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-05-03T19:08:49 IST" name="Functional Suite" finished-at="2023-05-03T19:08:49 IST" duration-ms="48">
+  <suite started-at="2023-06-01T12:31:48Z" name="PetStore Test Suite" finished-at="2023-06-01T12:32:47Z" duration-ms="58339">
     <groups>
-      <group name="Atmecs">
-        <method signature="TestNGDependencies.fourthTest()[pri:4, instance:testng.basics.TestNGDependencies@525b461a]" name="fourthTest" class="testng.basics.TestNGDependencies"/>
-      </group> <!-- Atmecs -->
     </groups>
-    <test started-at="2023-05-03T19:08:49 IST" name="Dependencies" finished-at="2023-05-03T19:08:49 IST" duration-ms="48">
-      <class name="testng.basics.TestNGDependencies">
-        <test-method signature="fourthTest()[pri:4, instance:testng.basics.TestNGDependencies@525b461a]" started-at="2023-05-03T19:08:49 IST" name="fourthTest" finished-at="2023-05-03T19:08:49 IST" duration-ms="9" status="PASS">
+    <test started-at="2023-06-01T12:31:48Z" name="PetStore Test" finished-at="2023-06-01T12:32:47Z" duration-ms="58339">
+      <class name="petstoreswagger.finalproject.TestScenario">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:petstoreswagger.finalproject.TestScenario@4445629]" started-at="2023-06-01T12:31:48Z" name="setUp" finished-at="2023-06-01T12:31:48Z" duration-ms="126" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- fourthTest -->
-      </class> <!-- testng.basics.TestNGDependencies -->
-    </test> <!-- Dependencies -->
-  </suite> <!-- Functional Suite -->
+        </test-method> <!-- setUp -->
+        <test-method signature="scenarioOne()[pri:0, instance:petstoreswagger.finalproject.TestScenario@4445629]" started-at="2023-06-01T12:31:48Z" name="scenarioOne" finished-at="2023-06-01T12:32:28Z" duration-ms="39878" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- scenarioOne -->
+        <test-method signature="scenarioTwo()[pri:0, instance:petstoreswagger.finalproject.TestScenario@4445629]" started-at="2023-06-01T12:32:28Z" name="scenarioTwo" finished-at="2023-06-01T12:32:33Z" duration-ms="4781" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- scenarioTwo -->
+        <test-method signature="scenarioThree()[pri:0, instance:petstoreswagger.finalproject.TestScenario@4445629]" started-at="2023-06-01T12:32:33Z" name="scenarioThree" finished-at="2023-06-01T12:32:46Z" duration-ms="13317" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- scenarioThree -->
+        <test-method is-config="true" signature="tearDownExtentReports()[pri:0, instance:petstoreswagger.finalproject.TestScenario@4445629]" started-at="2023-06-01T12:32:46Z" name="tearDownExtentReports" finished-at="2023-06-01T12:32:47Z" duration-ms="237" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownExtentReports -->
+      </class> <!-- petstoreswagger.finalproject.TestScenario -->
+    </test> <!-- PetStore Test -->
+  </suite> <!-- PetStore Test Suite -->
 </testng-results>
