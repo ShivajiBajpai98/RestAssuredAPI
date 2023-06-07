@@ -45,7 +45,7 @@ public class ExcelToRestAssured {
                     Cell headerCell = headerRow.getCell(cellIndex);
 
                     String key = headerCell.getStringCellValue();
-                    String value = null;
+                    String value;
 
                     // Retrieve the cell value based on its type
                     switch (cell.getCellType()) {
